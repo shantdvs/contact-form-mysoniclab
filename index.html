@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | My Sonic Lab</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Get in Touch</h1>
+                <p>Have questions? We'd love to hear from you.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Form -->
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Your name" 
+                            required
+                        >
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="your@email.com" 
+                                required
+                            >
+                            <span class="error-msg" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="+1 (555) 000-0000"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            placeholder="What is this about?" 
+                            required
+                        >
+                        <span class="error-msg" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry_type">Type of Inquiry *</label>
+                        <select id="inquiry_type" name="inquiry_type" required>
+                            <option value="">-- Select --</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="sales">Sales & Products</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="dealer">Dealer Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-msg" id="inquiryError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            placeholder="Tell us more..." 
+                            rows="8" 
+                            required
+                        ></textarea>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input 
+                            type="text" 
+                            id="country" 
+                            name="country" 
+                            placeholder="Where are you from?"
+                        >
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input 
+                            type="checkbox" 
+                            id="privacy" 
+                            name="privacy" 
+                            required
+                        >
+                        <label for="privacy" class="checkbox-label">
+                            I agree to the <a href="/privacy" target="_blank">privacy policy</a>
+                        </label>
+                        <span class="error-msg" id="privacyError"></span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+
+                    <div id="successMsg" class="success-msg hidden">
+                        ✓ Thank you! We'll get back to you shortly.
+                    </div>
+                </form>
+
+                <!-- Contact Info (Optional) -->
+                <aside class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <strong>Address</strong>
+                        <p>Moscow, Russia</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>Email</strong>
+                        <p><a href="mailto:info@mysoniclab.com">info@mysoniclab.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <strong>Phone</strong>
+                        <p><a href="tel:+74951234567">+7 (495) 123-4567</a></p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <script src="contact.js"></script>
+</body>
+</html>
